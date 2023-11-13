@@ -13,12 +13,12 @@ class StationAdapter(private var stations: List<Station>) :
     }
 
     override fun onBindViewHolder(viewholder: StationViewHolder, position: Int) {
-        val (ad_station, nb_pdc, acces_recharge, accessbilite) = this.stations[position]
+        val (n_amenageur,n_operateur , id_station, n_station, ad_station,code_insee, xlongitude, ylatitude, nbre_pdc, id_pdc, puiss_max, type_prise, acces_recharge, accessibilite, observations, date_maj, source, region,departement) = this.stations[position]
 
         viewholder.ad_station.text = ad_station
-        viewholder.nb_pdc.text = nb_pdc
-        viewholder.acces_recharge.text = acces_recharge
-        viewholder.accessbilite.text = accessbilite
+        viewholder.nb_pdc.text = nbre_pdc.toString() + " place(s) disponible(s)"
+        viewholder.acces_recharge.text = "Acces : " + acces_recharge
+        viewholder.accessbilite.text ="Accessibilite : " +  accessibilite
     }
 
     override fun getItemCount(): Int {

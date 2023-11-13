@@ -15,7 +15,8 @@
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="172dp"
         android:text="Adresse"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,12 +31,14 @@
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="107dp"
         android:text="Nombre de places"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/id_row_type_acces"
@@ -60,7 +63,7 @@
         android:layout_marginTop="184dp"
         android:layout_marginEnd="27dp"
         android:text="Accessibilite"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

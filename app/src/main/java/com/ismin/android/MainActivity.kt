@@ -125,7 +125,6 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback {
         }
     }
 
-
     override fun onMapReady(gmap: GoogleMap) {
         //System.out.println("TEST - MAP")
 
