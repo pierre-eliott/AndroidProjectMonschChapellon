@@ -14,6 +14,19 @@ class Stations {
         return stations.sortedBy { it.ad_station }
     }
 
+    fun sortedStationsByFavorites(): ArrayList<Station> {
+        val favoriteStations = stations.filter { it.isFavorite }
+        val nonFavoriteStations = stations.filter { !it.isFavorite }
+
+        val sortedStations = ArrayList<Station>()
+        sortedStations.addAll(favoriteStations)
+        sortedStations.addAll(nonFavoriteStations)
+
+        return sortedStations
+    }
+
+
+
     fun deleteAllStations(){
         stations = arrayListOf<Station>()
     }

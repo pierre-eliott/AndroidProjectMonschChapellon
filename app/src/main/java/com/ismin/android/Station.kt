@@ -3,6 +3,7 @@ package com.ismin.android
 import java.io.Serializable
 
 data class Station (
+    val id: Int,
     val n_amenageur: String,
     val n_operateur: String,
     val id_station: String,
@@ -21,5 +22,6 @@ data class Station (
     val date_maj: String,
     val source: String,
     val region: String,
-    val departement: String
+    val departement: String,
+    val isFavorite: Boolean
 ): Serializable
