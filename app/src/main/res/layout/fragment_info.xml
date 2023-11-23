@@ -1,14 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="77dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="633dp"
+        android:src="@drawable/baseline_electrical_services_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/id_app_title"
+        android:layout_width="413dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="572dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#222222"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="JuiceUp Spot" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="574dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_app_author"
+        android:layout_width="411dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="498dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="©Pierre-Eliott Monsch and Léa Chapelon" />
+
+    <TextView
+        android:id="@+id/id_app_source"
+        android:layout_width="413dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginBottom="445dp"
+        android:fontFamily="sans-serif-light"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Source: OpenData Réseaux-Energies" />
+
+    <TextView
+        android:id="@+id/id_app_link"
+        android:layout_width="413dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="286dp"
+        android:layout_marginBottom="393dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Lien: https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/bornes-irve/records?limit=100" />
+
+    <TextView
+        android:id="@+id/id_app_infos"
+        android:layout_width="409dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Cette application rassemble les informations relatives aux bornes de recharge de la région disponibles dans la source. \n\n Ces informations sont entre autre: \n\n - Nom de la station \n\n - Adresse de la station \n\n -Type d'accès \n\n - Accessibilité \n\n - Type(s) de prise(s) \n\n - Puissance maximale disponible \n\n - Nombre de places dans la station \n\n -Numéro de l'aménageur \n\n - Numéro de l'opérateur \n\n -Commentaires sur la station \n\n - Position GPS" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

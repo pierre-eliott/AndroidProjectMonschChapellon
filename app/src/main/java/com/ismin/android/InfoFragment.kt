@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +22,12 @@ class InfoFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var appAuthorTextView: TextView
+    private lateinit var appTitleTextView: TextView
+    private lateinit var appSourceTextView: TextView
+    private lateinit var appLinkTextView: TextView
+    private lateinit var appInfosTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -33,8 +40,23 @@ class InfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info, container, false)
+        val view = inflater.inflate(R.layout.fragment_info, container, false)
+
+        // Trouver les TextViews dans le layout du fragment
+        appAuthorTextView = view.findViewById(R.id.id_app_author)
+        appTitleTextView = view.findViewById(R.id.id_app_title)
+        appSourceTextView = view.findViewById(R.id.id_app_source)
+        appLinkTextView = view.findViewById(R.id.id_app_link)
+        appInfosTextView = view.findViewById(R.id.id_app_infos)
+
+        // Assigner les valeurs aux TextViews
+        appAuthorTextView.text = "©Pierre-Eliott Monsch & Léa Chapelon"
+        appTitleTextView.text = "JuiceUp Spot"
+        appSourceTextView.text = "Source: OpenData Réseaux-Energies"
+        appLinkTextView.text = "Lien: https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/bornes-irve/records?limit=100"
+        appInfosTextView.text = "Cette application rassemble les informations relatives aux bornes de recharge de la région disponibles dans la source. \n\n Ces informations sont entre autre: \n\n - Nom de la station \n - Adresse de la station \n -Type d'accès \n - Accessibilité \n - Type(s) de prise(s) \n - Puissance maximale disponible \n - Nombre de places dans la station \n -Numéro de l'aménageur \n - Numéro de l'opérateur \n -Commentaires sur la station \n - Position GPS"
+
+        return view
     }
 
     companion object {
