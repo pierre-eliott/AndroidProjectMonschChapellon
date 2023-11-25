@@ -30,9 +30,9 @@ class StationInfoActivity : AppCompatActivity() {
                 accessTypeTextView.text = "Accès: " + it.acces_recharge
                 accessibilityTextView.text = "Accessibilité: " + it.accessibilite
                 typePriseTextView.text = "Type(s) de prise(s): " + it.type_prise
-                maxPowerTextView.text = "Puissance max: " + it.puiss_max.toString()
-                amenageurTextView.text = "N° Oménageur: "+it.n_amenageur
-                operateurTextView.text = "N° Opérateur: "+it.n_operateur
+                maxPowerTextView.text = "Puissance max: " + it.puiss_max.toString() + " kW"
+                amenageurTextView.text = "Aménageur: "+it.n_amenageur
+                operateurTextView.text = "Opérateur: "+it.n_operateur
                 numPlacesTextView.text = "Place(s) disponible(s): "+it.nbre_pdc.toString()
                 commentsTextView.text = "Commentaire(s): \n\n" + it.observations
             }
