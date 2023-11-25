@@ -43,7 +43,7 @@ class StationAdapter(
     override fun onBindViewHolder(viewholder: StationViewHolder, position: Int) {
         val currentStation = stations[position]
 
-        viewholder.ad_station.text = currentStation.ad_station
+        viewholder.ad_station.text = currentStation.n_station
         viewholder.nb_pdc.text = "${currentStation.nbre_pdc} place(s) disponible(s)"
         viewholder.acces_recharge.text = "Accès : ${currentStation.acces_recharge}"
         viewholder.accessbilite.text = "Accessibilité : ${currentStation.accessibilite}"

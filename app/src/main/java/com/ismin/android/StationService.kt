@@ -14,4 +14,7 @@ interface StationService {
 
     @POST("stations/fav")
     fun addRemoveFavorit( @Body request: StationIdRequest): Call<List<Station>>
+
+    @POST("stations/search")
+    fun searchByName(@Body request: StationNameRequest): Call<List<Station>>
 }

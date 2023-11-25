@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var refreshButton: ImageButton
+
+    private lateinit var searchBar: EditText
+
+    private lateinit var searchButton: ImageButton
 
     val SERVER_BASE_URL = "https://app-e0615a1c-398d-44a3-9bd8-96a6a3ef78db.cleverapps.io/"
 
@@ -58,6 +63,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
         refreshButton = findViewById(R.id.refreshButton)
 
         refreshButton.setOnClickListener {refreshData()}
+
+        searchBar = findViewById(R.id.searchBar)
+
+        searchButton = findViewById(R.id.searchButton)
+
+        searchButton.setOnClickListener {
+            val searchText: String = searchBar.text.toString()
+            searchByName(searchText)
+        }
 
         setCurrentFragment(homeFragment)
 
@@ -137,6 +151,41 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
             })
     }
 
+    private fun searchByName(name: String) {
+        System.out.println("Test - Search By Name: " + name)
+        stations.deleteAllStations()
+        val request = StationNameRequest(name = name)
+        stationService.searchByName(request)
+            .enqueue(object : Callback<List<Station>> {
+                override fun onResponse(
+                    call: Call<List<Station>>,
+                    response: Response<List<Station>>
+                ) {
+                    val allStations: List<Station>? = response.body()
+
+                    if (allStations != null) {
+
+                        for(elmnt in allStations) {
+
+                            stations.addStation(elmnt)
+                        }
+
+                        val fragmentTransaction = supportFragmentManager.beginTransaction()
+                        val fragment = StationListFragment.newInstance(stations.sortedStationsByFavorites())
+
+                        fragmentTransaction.replace(R.id.flFragment, fragment)
+
+                        fragmentTransaction.commit()
+                    }
+                }
+
+                override fun onFailure(call: Call<List<Station>>, t: Throwable) {
+                    // DO THINGS
+                    System.out.println("FAILURE - ADD Stations FROM SERVER")
+                }
+            })
+    }
+
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             System.out.println("TEST - MAJ FRAGMENT")
@@ -150,6 +199,14 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
             when (fragment) {
                 is StationListFragment -> refreshButton.visibility = View.VISIBLE
                 else -> refreshButton.visibility = View.GONE
+            }
+            when (fragment) {
+                is StationListFragment -> searchButton.visibility = View.VISIBLE
+                else -> searchButton.visibility = View.GONE
+            }
+            when (fragment) {
+                is StationListFragment -> searchBar.visibility = View.VISIBLE
+                else -> searchBar.visibility = View.GONE
             }
 
             commit()
@@ -188,8 +245,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
                     response: Response<List<Station>>
                 ) {
                     val allStations: List<Station>? = response.body()
-
-                    System.out.println(allStations.toString())
 
                     if (allStations != null) {
 
