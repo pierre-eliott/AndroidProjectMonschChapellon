@@ -21,6 +21,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
@@ -208,6 +209,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
                 is StationListFragment -> searchBar.visibility = View.VISIBLE
                 else -> searchBar.visibility = View.GONE
             }
+            when(fragment)
+            {
+                is StationListFragment -> refreshData()
+            }
 
             commit()
         }
@@ -217,7 +222,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
         //System.out.println("TEST - MAP")
 
         val posCamera = LatLng(47.099419, 2.349404 )
-        val zoomLevel = 5.0f
+        val zoomLevel = 6.0f
         val cameraUpdate = CameraUpdateFactory.newLatLngZoom(posCamera, zoomLevel)
 
         gmap.moveCamera(cameraUpdate)
@@ -225,12 +230,23 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
         for(elmnt in stations.getArrayList())
         {
             val pos = LatLng(elmnt.ylatitude, elmnt.xlongitude)
-            gmap.addMarker(
-                MarkerOptions()
-                    .position(pos)
-                    .title(elmnt.ad_station)
-                    //.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_launcher_foreground))
-            )
+            if(elmnt.isFavorite)
+            {
+                gmap.addMarker(
+                    MarkerOptions()
+                        .position(pos)
+                        .title(elmnt.n_station)
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                )
+            }
+            else {
+                gmap.addMarker(
+                    MarkerOptions()
+                        .position(pos)
+                        .title(elmnt.n_station)
+                )
+
+            }
         }
     }
 
