@@ -1,4 +1,4 @@
-# Projet WEB + Android
+# Projet Android
 
 *10/12/2023, Pierre-Elliot Monsch - Léa Chapellon*
 
