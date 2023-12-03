@@ -1,6 +1,6 @@
 # Projet Android
 
-*10/12/2023, Pierre-Elliot Monsch - Léa Chapellon*
+*10/12/2023, Pierre-Eliott Monsch - Léa Chapellon*
 
 ## Installation
 
