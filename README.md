@@ -2,6 +2,12 @@
 
 *10/12/2023, Pierre-Elliot Monsch - Léa Chapellon*
 
+## Installation
+
+1. Clonez le dépôt.
+2. Ouvrir le projet depuis Android Studio
+3. Pour des détails de configuration spécifiques ou des dépendances particulières, référez-vous au fichier config.gradle ou au code.
+
 ## Sommaire
 
 1. Presentation de l'API
