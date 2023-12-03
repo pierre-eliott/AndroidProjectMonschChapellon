@@ -1,11 +1,17 @@
 # Projet Android
 
-*10/12/2023, Pierre-Elliot Monsch - Léa Chapellon*
+*10/12/2023, Pierre-Eliott Monsch - Léa Chapellon*
+
+## Installation
+
+1. Clonez le dépôt.
+2. Ouvrir le projet depuis Android Studio
+3. Pour des détails de configuration spécifiques ou des dépendances particulières, référez-vous au fichier config.gradle ou au code.
 
 ## Sommaire
 
-1. Presentation de l'API
-2. Présenation de l'application
+1. Présentation de l'API
+2. Présentation de l'application
 3. Licenses
 4. Check-up des consignes
 
@@ -26,7 +32,7 @@ Ces données datent de 2019 et sont mises à jour mensuellement
 
 ## Présentation de l'application
 
-Notre application se nomme JuiceSpot. Les données sont affichées en liste et sur une carte. Avec la possibilité d'avoir des informations supplémentaires quand on sélectionne une borne de recharge.
+Notre application se nomme JuiceUp Spot. Les données sont affichées en liste et sur une carte. Avec la possibilité d'avoir des informations supplémentaires quand on sélectionne une borne de recharge.
 
 ## Licenses
 
