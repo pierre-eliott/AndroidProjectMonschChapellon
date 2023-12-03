@@ -61,7 +61,7 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
       - [x] côté serveur
       - [ ] côté app 
     - [x] *Ajouter un endpoint de recherche*
-    - [ ] *Gérer la pagination des données sur le endpoint retournant le résumé des données*
+    - [x] *Gérer la pagination des données sur le endpoint retournant le résumé des données*
 - [x] Application Android
   - [x] Récupération des données de l'API
     - [x] Affichage sur une carte
