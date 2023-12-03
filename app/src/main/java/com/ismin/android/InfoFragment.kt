@@ -50,7 +50,7 @@ class InfoFragment : Fragment() {
         appInfosTextView = view.findViewById(R.id.id_app_infos)
 
         // Assigner les valeurs aux TextViews
-        appAuthorTextView.text = "©Pierre-Eliott Monsch & Léa Chapelon"
+        appAuthorTextView.text = "©Pierre-Eliott Monsch & Léa Chapellon"
         appTitleTextView.text = "JuiceUp Spot"
         appSourceTextView.text = "Source: OpenData Réseaux-Energies"
         appLinkTextView.text = "Lien: https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/bornes-irve/records?limit=100"
