@@ -10,7 +10,7 @@
 
 ## Sommaire
 
-1. Presentation de l'API
+1. Présentation de l'API
 2. Présentation de l'application
 3. Licenses
 4. Check-up des consignes
