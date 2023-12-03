@@ -32,7 +32,7 @@ Ces données datent de 2019 et sont mises à jour mensuellement
 
 ## Présentation de l'application
 
-Notre application se nomme JuiceSpot. Les données sont affichées en liste et sur une carte. Avec la possibilité d'avoir des informations supplémentaires quand on sélectionne une borne de recharge.
+Notre application se nomme JuiceUp Spot. Les données sont affichées en liste et sur une carte. Avec la possibilité d'avoir des informations supplémentaires quand on sélectionne une borne de recharge.
 
 ## Licenses
 
