@@ -78,9 +78,7 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
     - [ ] Mise en place d’une base de données locale 
     - [ ] Utilisation de LiveData ou d’Observable pour la récupération de données dans la BDD
       
+![Home](https://github.com/pierre-eliott/AndroidProjectMonschChapellon/assets/94474237/a33c7ab0-580a-45a9-b3b2-e30994a110f5)
+![Info](https://github.com/pierre-eliott/AndroidProjectMonschChapellon/assets/94474237/126ca44f-77e3-42b5-9d94-00ff77f64175)
 
-<img src="/Home.PNG"/>
-<img src="/Station.PNG"/>
-<img src="/Search.PNG"/>
-<img src="/Map.PNG"/>
-<img src="/Info.PNG"/>
+
