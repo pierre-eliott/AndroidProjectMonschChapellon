@@ -209,10 +209,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
                 is StationListFragment -> searchBar.visibility = View.VISIBLE
                 else -> searchBar.visibility = View.GONE
             }
-            when(fragment)
-            {
-                is StationListFragment -> refreshData()
-            }
 
             commit()
         }

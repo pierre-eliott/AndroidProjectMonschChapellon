@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <FrameLayout
         android:id="@+id/flFragment"
         android:layout_width="match_parent"
@@ -14,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
 
     </FrameLayout>
 
@@ -22,49 +21,35 @@
         android:id="@+id/searchBar"
         android:layout_width="304dp"
         android:layout_height="40dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="91dp"
+        android:layout_margin="16dp"
         android:background="@drawable/rounded_edittext_bg"
         android:hint="Rechercher..."
         android:padding="8dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/searchButton"
         android:layout_width="38dp"
         android:layout_height="40dp"
-        android:layout_marginStart="357dp"
-        android:layout_marginTop="600dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="91dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/refresh_button"
         android:foreground="@drawable/baseline_search_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/searchBar"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/refreshButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="346dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="665dp"
+        android:layout_margin="16dp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:contentDescription="@string/refresh_button"
         android:foreground="@drawable/baseline_refresh_24"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -76,5 +61,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
