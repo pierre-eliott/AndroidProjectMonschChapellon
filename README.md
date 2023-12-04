@@ -79,3 +79,5 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
     - [ ] Utilisation de LiveData ou d’Observable pour la récupération de données dans la BDD
        
   ![alt text](https://github.com/pierre-eliott/AndroidProjectMonschChapellon/blob/master/Home.PNG?raw=true)
+
+<img src="Home.PNG" width="128"/>
