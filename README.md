@@ -78,20 +78,12 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
     - [ ] Mise en place d’une base de données locale 
     - [ ] Utilisation de LiveData ou d’Observable pour la récupération de données dans la BDD
       
-<style>
-    .half-size {
-        width: 50%; /* réduit la largeur de moitié */
-        height: auto; /* garde le ratio hauteur/largeur */
-        margin-right: 10px;
-    }
-</style>
-
 <div style="display: flex; justify-content: center;">
-    <img src="/Home.PNG" class="half-size" />
-    <img src="/Station.PNG" class="half-size" />
-    <img src="/Search.PNG" class="half-size" />
-    <img src="/Map.PNG" class="half-size" />
-    <img src="/Info.PNG" class="half-size" />
+    <img src="/Home.PNG" style="margin-right: 10px;" />
+    <img src="/Station.PNG" style="margin-right: 10px;" />
+    <img src="/Search.PNG" style="margin-right: 10px;" />
+    <img src="/Map.PNG" style="margin-right: 10px;" />
+    <img src="/Info.PNG" />
 </div>
 
 
