@@ -80,4 +80,4 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
        
   ![alt text](https://github.com/pierre-eliott/AndroidProjectMonschChapellon/blob/master/Home.PNG?raw=true)
 
-<img src="Home.PNG" width="128"/>
+<img src="/Home.PNG" width="128"/>
