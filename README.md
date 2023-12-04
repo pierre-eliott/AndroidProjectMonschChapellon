@@ -6,7 +6,7 @@
 
 1. Clonez le dépôt.
 2. Ouvrir le projet depuis Android Studio
-3. Pour des détails de configuration spécifiques ou des dépendances particulières, référez-vous au fichier config.gradle ou au code.
+3. Pour des détails de configuration spécifiques ou des dépendances particulières, référez-vous au fichier build.gradle ou au code.
 
 ## Sommaire
 
