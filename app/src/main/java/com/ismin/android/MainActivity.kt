@@ -100,12 +100,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
                             stations.addStation(elmnt)
                         }
 
-                    val fragmentTransaction = supportFragmentManager.beginTransaction()
-                    val fragment = StationListFragment.newInstance(stations.sortedStationsByFavorites())
+                        val fragmentTransaction = supportFragmentManager.beginTransaction()
+                        val fragment = StationListFragment.newInstance(stations.sortedStationsByFavorites())
 
-                    fragmentTransaction.replace(R.id.flFragment, fragment)
+                        fragmentTransaction.replace(R.id.flFragment, fragment)
 
-                    fragmentTransaction.commit()
+                        fragmentTransaction.commit()
                     }
                 }
 
