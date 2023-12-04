@@ -82,10 +82,10 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
 ## Screenshots
       
 <div style="display: flex; justify-content: center;">
-    <img src="/Home.PNG" style="margin-right: 10px;" />
-    <img src="/Station.PNG" style="margin-right: 10px;" />
-    <img src="/Search.PNG" style="margin-right: 10px;" />
-    <img src="/Map.PNG" style="margin-right: 10px;" />
+    <img src="/Home.PNG" style="margin-right: 20px;" />
+    <img src="/Station.PNG" style="margin-right: 20px;" />
+    <img src="/Search.PNG" style="margin-right: 20px;" />
+    <img src="/Map.PNG" style="margin-right: 20px;" />
     <img src="/Info.PNG" />
 </div>
 
