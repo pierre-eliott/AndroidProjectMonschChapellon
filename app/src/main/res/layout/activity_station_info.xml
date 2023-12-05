@@ -7,21 +7,6 @@
     android:background="@color/colorAccent"
     tools:context=".StationInfoActivity">
 
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="335dp"
-        android:layout_marginTop="666dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="15dp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:foreground="@drawable/baseline_home_24_black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/id_info_adresse"
         android:layout_width="368dp"

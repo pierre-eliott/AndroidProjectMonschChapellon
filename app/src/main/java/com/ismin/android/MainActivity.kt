@@ -3,6 +3,8 @@ package com.ismin.android
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
@@ -31,8 +33,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var refreshButton: ImageButton
-
     private lateinit var searchBar: EditText
 
     private lateinit var searchButton: ImageButton
@@ -60,10 +60,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
         val mapFragment=SupportMapFragment.newInstance()
         mapFragment.getMapAsync(this)
         val infoFragment=InfoFragment()
-
-        refreshButton = findViewById(R.id.refreshButton)
-
-        refreshButton.setOnClickListener {refreshData()}
 
         searchBar = findViewById(R.id.searchBar)
 
@@ -198,10 +194,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
                 replace(R.id.flFragment, mapFragment)
             }
             when (fragment) {
-                is StationListFragment -> refreshButton.visibility = View.VISIBLE
-                else -> refreshButton.visibility = View.GONE
-            }
-            when (fragment) {
                 is StationListFragment -> searchButton.visibility = View.VISIBLE
                 else -> searchButton.visibility = View.GONE
             }
@@ -260,13 +252,14 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
 
                     if (allStations != null) {
 
-                        for(elmnt in allStations) {
+                        for (elmnt in allStations) {
 
                             stations.addStation(elmnt)
                         }
 
                         val fragmentTransaction = supportFragmentManager.beginTransaction()
-                        val fragment = StationListFragment.newInstance(stations.sortedStationsByFavorites())
+                        val fragment =
+                            StationListFragment.newInstance(stations.sortedStationsByFavorites())
 
                         fragmentTransaction.replace(R.id.flFragment, fragment)
 
@@ -285,5 +278,18 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, StationAdapter.Sta
         val intent = Intent(this, StationInfoActivity::class.java)
         intent.putExtra("station", station)
         startActivity(intent)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.top_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        return if (id == R.id.refresh) {
+            refreshData()
+            true
+        } else super.onOptionsItemSelected(item)
     }
 }

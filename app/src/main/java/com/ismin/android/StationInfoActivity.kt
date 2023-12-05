@@ -2,6 +2,8 @@ package com.ismin.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ImageButton
 import android.widget.TextView
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -53,11 +55,6 @@ class StationInfoActivity : AppCompatActivity(), OnMapReadyCallback {
                 commentsTextView.text = "Commentaire(s): \n\n" + it.observations
             }
         }
-
-        val homeButton: ImageButton = findViewById(R.id.homeButton)
-        homeButton.setOnClickListener {
-            onBackPressed() // Retour à l'activité parente
-        }
     }
 
     override fun onResume() {
@@ -105,4 +102,16 @@ class StationInfoActivity : AppCompatActivity(), OnMapReadyCallback {
             googleMap?.moveCamera(CameraUpdateFactory.newLatLngZoom(stationLocation, 9f))
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.back_menu, menu)
+        val backButton = menu.findItem(R.id.action_back)
+
+        backButton.setOnMenuItemClickListener {
+            onBackPressed()
+            true
+        }
+        return true
+    }
+
 }

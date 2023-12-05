@@ -41,17 +41,6 @@
         app:layout_constraintBottom_toBottomOf="@id/searchBar"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/refreshButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="16dp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/refresh_button"
-        android:foreground="@drawable/baseline_refresh_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
