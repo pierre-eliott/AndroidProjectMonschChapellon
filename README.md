@@ -14,6 +14,7 @@
 2. Présentation de l'application
 3. Licenses
 4. Check-up des consignes
+5. Screenshots
 
 ## Présentation de l'API
 
@@ -77,3 +78,16 @@ Base de donnée : https://odre.opendatasoft.com/explore/dataset/bornes-irve/info
   - [ ] *Bonus :*
     - [ ] Mise en place d’une base de données locale 
     - [ ] Utilisation de LiveData ou d’Observable pour la récupération de données dans la BDD
+       
+## Screenshots
+      
+<div style="display: flex; justify-content: center;">
+    <img src="/Home.PNG" style="margin-right: 20px;" />
+    <img src="/Station.PNG" style="margin-right: 20px;" />
+    <img src="/Search.PNG" style="margin-right: 20px;" />
+    <img src="/Map.PNG" style="margin-right: 20px;" />
+    <img src="/Info.PNG" />
+</div>
+
+
+
