@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/frameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@color/colorAccent"
     tools:context=".InfoFragment">
 
@@ -20,7 +23,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:id="@+id/id_app_title"
@@ -56,8 +60,8 @@
 
     <TextView
         android:id="@+id/id_app_author"
-        android:layout_width="411dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="173dp"
         android:layout_marginBottom="497dp"
         android:fontFamily="sans-serif-light"
@@ -73,8 +77,8 @@
 
     <TextView
         android:id="@+id/id_app_source"
-        android:layout_width="413dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="234dp"
         android:layout_marginBottom="445dp"
         android:fontFamily="sans-serif-light"
@@ -90,8 +94,8 @@
 
     <TextView
         android:id="@+id/id_app_link"
-        android:layout_width="413dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="286dp"
         android:layout_marginBottom="393dp"
         android:fontFamily="sans-serif"
@@ -108,11 +112,9 @@
 
     <TextView
         android:id="@+id/id_app_infos"
-        android:layout_width="409dp"
-        android:layout_height="390dp"
-        android:layout_marginTop="338dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
         android:fontFamily="sans-serif"
         android:text="TextView"
         android:textAlignment="center"
@@ -125,3 +127,4 @@
         tools:text="Cette application rassemble les informations relatives aux bornes de recharge de la région disponibles dans la source. \n\n Ces informations sont entre autre: \n\n - Nom de la station \n\n - Adresse de la station \n\n -Type d'accès \n\n - Accessibilité \n\n - Type(s) de prise(s) \n\n - Puissance maximale disponible \n\n - Nombre de places dans la station \n\n -Numéro de l'aménageur \n\n - Numéro de l'opérateur \n\n -Commentaires sur la station \n\n - Position GPS" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,223 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    tools:context=".StationInfoActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/id_info_adresse"
-        android:layout_width="368dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="582dp"
-        android:text="Adresse"
-        android:textColor="#222222"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            tools:context=".StationInfoActivity">
 
-    <TextView
-        android:id="@+id/id_info_type_acces"
-        android:layout_width="368dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="177dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="502dp"
-        android:text="Type d'accès"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_adresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse"
+                android:textColor="#222222"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_n_station"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_accessibilite"
-        android:layout_width="368dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="229dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="448dp"
-        android:text="Accessibilite"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_type_acces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type d'accès"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_adresse"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_type_prise"
-        android:layout_width="368dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="283dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="396dp"
-        android:text="Type de prise"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_type_prise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de prise"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_type_acces"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_puissance"
-        android:layout_width="368dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="341dp"
-        android:text="Puissance Max"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_n_operateur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numero operateur"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_n_amenageur"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_commentaires"
-        android:layout_width="367dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="597dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="37dp"
-        android:text="Commentaires"
-        android:textColor="#222222"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_n_amenageur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Numero amenageur"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_accessibilite"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_nb_places"
-        android:layout_width="367dp"
-        android:layout_height="69dp"
+            <TextView
+                android:id="@+id/id_info_nb_places"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de places"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_puissance"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="390dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="272dp"
-        android:text="Nombre de places"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/id_info_puissance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Puissance Max"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_type_prise"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_n_amenageur"
-        android:layout_width="367dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="27dp"
-        android:text="Numero amenageur"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+            <TextView
+                android:id="@+id/id_info_accessibilite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accessibilite"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_nb_places"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/id_info_n_operateur"
-        android:layout_width="367dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="27dp"
-        android:text="Numero operateur"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
+            <TextView
+                android:id="@+id/id_info_n_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Station"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/id_info_adresse"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/id_info_n_station"
-        android:layout_width="366dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="172dp"
-        android:text="Station"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="367dp"
+                android:layout_height="128dp"
+                android:background="@drawable/rounded_map"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_info_n_operateur"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
 
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="409dp"
-        android:layout_height="3dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="646dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/id_info_commentaires"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Commentaires"
+                android:textColor="#222222"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
-    <View
-        android:id="@+id/divider9"
-        android:layout_width="409dp"
-        android:layout_height="3dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="597dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="131dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="367dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="448dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="155dp"
-        android:background="@drawable/rounded_map"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
